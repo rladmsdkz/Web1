@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <title>TRILINGUAL-Korean</title>
+  <meta charset="utf-8">
+  <script>
+    var Links = {
+    setColor: function(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+          alist[i].style.color = color;
+          i = i + 1;
+      }
+    }
+  }
+    var Body = {
+      setColor: function (color){
+        document.querySelector('body').style.color = color;
+      },
+      setBackgroundColor: function(color) {
+        document.querySelector('body').style.backgroundColor = color;
+      }
+    }
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        Body.setBackgroundColor('black');
+        Body.setColor ('white');
+        self.value = 'day';
+        Links.setColor('powderblue');
+        } else {
+          Body.setBackgroundColor('white');
+          Body.setColor('black');
+          self.value = 'night';
+          Links.setColor('blue');
+        }
+      }
+  </script>
+</head>
+<body>
+  <h1><a href="index.html">LET'S BE TRILINGUAL</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+  nightDayHandler(this)">
+  <ol>
+    <li><a href="1.html">Language</a></li>
+    <li><a href="2.html">Indonesian</a></li>
+    <li><a href="3.html">Korean</a></li>
+  </ol>
+  <h2>Korean</h2>
+  <h3> Greeting Expression</h3>
+  <p>
+    Hello = 안녕하세요<br>
+    Good Morning = 좋은 아침이에요<br>
+    Good Afternoon = 좋은 오후예요<br>
+    Good Evening = 좋은 저녁이에요<br>
+    Good Night = 좋은 밤이에요<br>
+    ==> But, remember in Korean we don't really use Good Afternoon, evening, and night<br>
+  </p>
+  <h3> Others</h3>
+  <p>
+    Come on, that's pretty dorky = 말도 안되는 소리다<br>
+    In a row = 연속으로<br>
+    Sorry about the other night = 저번 일 미안해<br>
+    Get along with someone = 누군가와 잘 지내다<br>
+    So do I = 나도 마찬가지야<br>
+  </p>
+
+</body>
+</html>
